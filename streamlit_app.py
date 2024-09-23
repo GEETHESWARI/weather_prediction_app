@@ -18,7 +18,7 @@ with st.expander('Data'):
 
 with st.expander('Data Visualization'):
   st.scatter_chart(
-    chart_data,
+    weather,
     x="date",
     y=["temp_max", "temp_min"],
     size="weather")
