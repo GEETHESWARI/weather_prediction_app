@@ -17,6 +17,7 @@ with st.expander('Data'):
   weather
 
 with st.expander('Data Visualization'):
-  sns.pairplot(data=weather,hue='weather',palette='rocket')
+  wind=px.scatter(data_frame=weather,x='wind',y="precipitation",color="weather",symbol='weather')
+  wind.show()
  
   
