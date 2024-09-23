@@ -17,7 +17,12 @@ with st.expander('Data'):
   weather
 
 with st.expander('Data Visualization'):
-  wind=px.scatter(data_frame=weather,x='wind',y="precipitation",color="weather",symbol='weather')
-  wind.show()
+  st.scatter_chart(
+    chart_data,
+    x="date",
+    y=["temp_max", "temp_min"],
+    size="weather",
+    
+)
  
   
