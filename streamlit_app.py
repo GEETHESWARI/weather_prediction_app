@@ -15,17 +15,8 @@ with st.expander('Data'):
   st.write("Weather data")
   weather=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/Weather_pred/refs/heads/main/seattle-weather.csv")
   weather
-  st.write("**Weather data info**")
-  st.write("*Weather data shape & size*")
-  
-  weather.shape
-  weather.size
-  st.write("*INFO*")
-  print(weather.info())
-  st.write("*Describe*")
-  weather.describe()
-  st.write("*Checking Null Values*")
-  weather.isnull().sum()
-  st.write("*Value Counts of Target Variables*")
-  weather.weather.value_counts()
+
+with st.expander('Data Visualization'):
+  sns.pairplot(data=weather,hue='weather',palette='rocket')
+ 
   
