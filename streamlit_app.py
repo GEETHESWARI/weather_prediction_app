@@ -21,7 +21,7 @@ with st.expander('Data'):
   weather.shape
   weather.size
   st.write("*INFO*")
-  weather.info()
+  print(weather.info())
   st.write("*Describe*")
   weather.describe()
   st.write("*Checking Null Values*")
