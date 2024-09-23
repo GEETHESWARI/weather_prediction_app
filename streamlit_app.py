@@ -11,7 +11,7 @@ st.title(' 🌦 Weather Prediction ⛈')
 
 st.info(' This Machine learning Model predicts the weather')
 
-
-weather=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/Weather_pred/refs/heads/main/seattle-weather.csv")
-
-weather
+with st.expander('Data'):
+  st.write("Weather data")
+  weather=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/Weather_pred/refs/heads/main/seattle-weather.csv")
+  weather
