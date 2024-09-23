@@ -20,4 +20,12 @@ with st.expander('Data'):
   
   weather.shape
   weather.size
+  st.write("*INFO*")
+  weather.info()
+  st.write("*Describe*")
+  weather.describe()
+  st.write("*Checking Null Values*")
+  weather.isnull().sum()
+  st.write("*Value Counts of Target Variables*")
+  weather.weather.value_counts()
   
