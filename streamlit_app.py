@@ -15,3 +15,9 @@ with st.expander('Data'):
   st.write("Weather data")
   weather=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/Weather_pred/refs/heads/main/seattle-weather.csv")
   weather
+  st.write("** Weather data info ** ")
+  st.write("* Weather data shape & size * ")
+  
+  weather.shape
+  weather.size
+  
