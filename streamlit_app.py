@@ -21,8 +21,6 @@ with st.expander('Data Visualization'):
     chart_data,
     x="date",
     y=["temp_max", "temp_min"],
-    size="weather",
-    
-)
+    size="weather")
  
   
