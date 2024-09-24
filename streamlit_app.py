@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
 
 
 st.title(' 🌦 Weather Prediction ⛈')
@@ -19,5 +20,13 @@ with st.expander('Data Visualization'):
     y=["temp_max"],
     color="weather",
     stack="center")
+
+  fig_wind = px.scatter(weather, x='wind',y="precipitation")
+
+  wind = st.plotly_chart(fig_wind, key="weather", on_select="rerun")
+
+  wind
+
+ 
  
   
