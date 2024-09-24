@@ -22,9 +22,15 @@ with st.expander('Data Visualization'):
     stack="center")
 
   fig_wind = px.scatter(weather, x='wind',y="precipitation",color="weather")
+  temp_max=px.scatter(data_frame=weather,x='temp_max',y="temp_min",color="weather",color_continuous_scale="reds")
+
   
-  tab1=st.tabs(["Wind Vs Precipitation"])
-  wind = st.plotly_chart(fig_wind, theme=None,use_container_width=True)
+  tab1,tab2=st.tabs(["Wind Vs Precipitation","Temp_max Vs Temp_min"])
+  with tab1:
+   st.plotly_chart(fig_wind, theme=None,use_container_width=True)
+  with tab2:  
+   st.plotly_chart(temp_max, theme=None,use_container_width=True)
+  
   
 
  
