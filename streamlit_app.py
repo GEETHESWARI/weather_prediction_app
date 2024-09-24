@@ -18,6 +18,6 @@ with st.expander('Data Visualization'):
     x="date",
     y=["temp_max"],
     color="weather",
-  size=["temp_min"])
+    size="temp_min")
  
   
