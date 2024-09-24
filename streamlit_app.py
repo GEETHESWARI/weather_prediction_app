@@ -24,7 +24,7 @@ with st.expander('Data Visualization'):
   fig_wind = px.scatter(weather, x='wind',y="precipitation",color="weather")
   
   tab1=st.tabs(["Wind Vs Precipitation"])
-  wind = st.plotly_chart(fig_wind, theme="streamlit",use_container_width=True)
+  wind = st.plotly_chart(fig_wind, theme=None,use_container_width=True)
   
 
  
