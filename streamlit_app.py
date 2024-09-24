@@ -24,7 +24,7 @@ with st.expander('Data Visualization'):
   fig_wind = px.scatter(weather, x='wind',y="precipitation",color="weather")
   temp_max=px.scatter(data_frame=weather,x='temp_max',y="temp_min",color="weather",color_continuous_scale="reds")
   date_= px.scatter_matrix(weather,dimensions=['precipitation', 'temp_max', 'temp_min', 'wind'],color='weather')
-  heat=px.imshow(weather,text_auto=True)
+  heat=px.imshow(weather['precipitation', 'temp_max', 'temp_min', 'wind'],text_auto=True)
 
   
   tab1,tab2,tab3,tab4=st.tabs(["Wind Vs Precipitation","Temp_max Vs Temp_min","Date Vs Temp_max","Heat Map"])
