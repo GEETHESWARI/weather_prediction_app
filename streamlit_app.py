@@ -23,7 +23,7 @@ with st.expander('Data Visualization'):
 
   fig_wind = px.scatter(weather, x='wind',y="precipitation",color="weather")
   temp_max=px.scatter(data_frame=weather,x='temp_max',y="temp_min",color="weather",color_continuous_scale="reds")
-  date_= px.area(weather, x='date', y='temp_max',color='weather',line_group="weather")
+  date_= px.scatter_matrix(weather,dimension=['precipitation', 'temp_max', 'temp_min', 'wind'],color='weather',line_group="weather")
 
   
   tab1,tab2,tab3=st.tabs(["Wind Vs Precipitation","Temp_max Vs Temp_min","Date Vs Temp_max"])
