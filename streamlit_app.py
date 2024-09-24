@@ -24,18 +24,16 @@ with st.expander('Data Visualization'):
   fig_wind = px.scatter(weather, x='wind',y="precipitation",color="weather")
   temp_max=px.scatter(data_frame=weather,x='temp_max',y="temp_min",color="weather",color_continuous_scale="reds")
   date_= px.scatter_matrix(weather,dimensions=['precipitation', 'temp_max', 'temp_min', 'wind'],color='weather')
-  heat=px.imshow(weather['precipitation', 'temp_max', 'temp_min', 'wind'],text_auto=True)
-
   
-  tab1,tab2,tab3,tab4=st.tabs(["Wind Vs Precipitation","Temp_max Vs Temp_min","Date Vs Temp_max","Heat Map"])
+  
+  tab1,tab2,tab3=st.tabs(["Wind Vs Precipitation","Temp_max Vs Temp_min","Date Vs Temp_max"])
   with tab1:
    st.plotly_chart(fig_wind, theme=None,use_container_width=True)
   with tab2:  
    st.plotly_chart(temp_max, theme=None,use_container_width=True)
   with tab3:
     st.plotly_chart(date_, theme=None,use_container_width=True)
-  with tab4:
-    st.plotly_chart(heat, theme=None,use_container_width=True)  
+  
   
   
 
