@@ -16,7 +16,7 @@ with st.expander('Data Visualization'):
   st.area_chart(
     weather,
     x="date",
-    y=["temp_max","temp_min"],
+    y=["temp_max"],
     color="weather",
     )
  
