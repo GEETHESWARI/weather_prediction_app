@@ -34,6 +34,8 @@ with st.expander('Data Visualization'):
 
 with st.sidebar:
   st.header("Input Features")
+  #'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'
+  precipitation= st.slider("Precipitation",0,3,56)
 
   
   
