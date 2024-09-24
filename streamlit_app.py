@@ -30,7 +30,11 @@ with st.expander('Data Visualization'):
   with tab3:
     st.plotly_chart(pair, theme=None,use_container_width=True)
   with tab4:
-    st.plotly_chart(date_, theme=None,use_container_width=True)  
+    st.plotly_chart(date_, theme=None,use_container_width=True) 
+
+with st.sidebar:
+  st.header["Input Features"]
+
   
   
   
