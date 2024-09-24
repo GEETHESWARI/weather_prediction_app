@@ -21,9 +21,9 @@ with st.expander('Data Visualization'):
     color="weather",
     stack="center")
 
-  fig_wind = px.scatter(weather, x='wind',y="precipitation")
+  fig_wind = px.scatter(weather, x='wind',y="precipitation",color="species")
 
-  wind = st.plotly_chart(fig_wind, key="weather", on_select="rerun")
+  wind = st.plotly_chart(fig_wind, key="weather")
 
   wind
 
