@@ -13,11 +13,11 @@ with st.expander('Data'):
   weather
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(
+  st.area_chart(
     weather,
     x="date",
-    y=["temp_max"],
+    y=["temp_max","temp_min"],
     color="weather",
-    size="temp_min")
+    )
  
   
