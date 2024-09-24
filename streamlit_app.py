@@ -14,12 +14,7 @@ with st.expander('Data'):
   weather
 
 with st.expander('Data Visualization'):
-  st.area_chart(
-    weather,
-    x="date",
-    y=["temp_max"],
-    color="weather",
-    stack="center")
+  
 
   fig_wind = px.scatter(weather, x='wind',y="precipitation",color="weather")
   temp_max=px.scatter(data_frame=weather,x='temp_max',y="temp_min",color="weather",color_continuous_scale="reds")
