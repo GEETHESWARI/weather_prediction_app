@@ -33,7 +33,7 @@ with st.expander('Data Visualization'):
     st.plotly_chart(date_, theme=None,use_container_width=True) 
 
 with st.sidebar:
-  st.header["Input Features"]
+  st.header("Input Features")
 
   
   
