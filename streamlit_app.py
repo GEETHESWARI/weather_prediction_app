@@ -36,6 +36,9 @@ with st.sidebar:
   st.header("Input Features")
   #'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'
   precipitation= st.slider("Precipitation",0,3,56)
+  temp_max= st.slider("Maximun Temperature",-1,16,36)
+  temp_min= st.slider("Minimun Temperature",-7,7,18)
+  wind= st.slider("Wind Speed ",0,3,10)
 
   
   
