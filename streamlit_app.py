@@ -14,7 +14,7 @@ with st.expander('Data'):
   weather
 
   st.write('**X**')
-  X_raw = weather.drop('weather', axis=1)
+  X_raw = weather.drop(['weather','date'], axis=1)
   X_raw
 
   st.write('**y**')
