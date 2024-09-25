@@ -57,7 +57,7 @@ with st.sidebar:
 
 
 with st.expander('Input features'):
-  st.write('**Input Weather features **')
+  st.write('**Input Weather features**')
   input_df
   st.write('**Combined  data**')
   input_weather
