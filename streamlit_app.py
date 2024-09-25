@@ -52,8 +52,14 @@ with st.sidebar:
         'temp_min': temp_min,
         'wind':wind}
   input_df=  pd.DataFrame(data, index=[0])
+  input_weather = pd.concat([input_df, X_raw], axis=0)
 
-input_df
+
+with st.expander('Input features'):
+  st.write('**Input penguin**')
+  input_df
+  st.write('**Combined penguins data**')
+  input_weather
 
   
   
