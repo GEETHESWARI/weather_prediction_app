@@ -38,8 +38,7 @@ with st.sidebar:
   temp_max= st.slider("Maximun Temperature",-1,16,36)
   temp_min= st.slider("Minimun Temperature",-7,7,18)
   wind= st.slider("Wind Speed ",0,3,10)
-  # creating data frame for input features
-  #'precipitation', 'temp_max', 'temp_min', 'wind', 'weather'
+  
   data={'precipitation': precipitation, 
         'temp_max': temp_max,
         'temp_min': temp_min,
