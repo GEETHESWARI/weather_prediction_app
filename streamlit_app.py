@@ -85,6 +85,27 @@ with st.expander('Data preparation'):
   input_row
   st.write('**Encoded y**')
   y
+
+
+# Model training and inference
+## Train the ML model
+clf = RandomForestClassifier()
+clf.fit(X, y)
+
+## Apply model to make predictions
+prediction = clf.predict(input_row)
+prediction_proba = clf.predict_proba(input_row)
+
+df_prediction_proba = pd.DataFrame(prediction_proba)
+df_prediction_proba.columns = ['drizzle', 'rain', 'sun', 'snow', 'fog']
+df_prediction_proba.rename(columns={0: 'drizzle',
+                                       1: 'rain' ,
+                                       2: 'sun',
+                                       3: 'snow', 
+                                       4: 'fog'})
+
+weather_pred = np.array(['drizzle', 'rain', 'sun', 'snow', 'fog'])
+st.success(str(weather_pred[prediction][0]))
   
   
   
