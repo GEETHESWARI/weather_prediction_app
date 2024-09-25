@@ -74,6 +74,17 @@ target_mapper = {'drizzle': 0,
                  'sun': 2,
                  'snow': 3, 
                  'fog':4 }
+
+def target_encode(val):
+  return target_mapper[val]
+
+y = y_raw.apply(target_encode)
+
+with st.expander('Data preparation'):
+  st.write('**Encoded X (input Weather )**')
+  input_row
+  st.write('**Encoded y**')
+  y
   
   
   
