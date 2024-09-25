@@ -46,7 +46,7 @@ with st.sidebar:
   precipitation= st.slider("Precipitation",0.0,3.5,56.5)
   temp_max= st.slider("Maximun Temperature",-1.0,16.5,36.2)
   temp_min= st.slider("Minimun Temperature",-7.0,7.5,18.8)
-  wind= st.slider("Wind Speed ",0,3.4,10.2)
+  wind= st.slider("Wind Speed ",0.0,3.4,10.2)
   
   data={'precipitation': precipitation, 
         'temp_max': temp_max,
