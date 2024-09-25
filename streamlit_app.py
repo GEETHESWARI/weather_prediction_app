@@ -107,11 +107,8 @@ df_prediction_proba.rename(columns={0: 'drizzle',
 
 
 st.subheader('Predicted Weather')
-# Create three columns
-col1, col2, col3 = st.columns(3)
-
-# Display the dataframe in the first column
-with col1:
+# Display the dataframe in the first row
+with st.container():
     st.dataframe(df_prediction_proba[['drizzle', 'rain']], column_config={
         'drizzle': st.column_config.ProgressColumn(
             'drizzle',
@@ -129,8 +126,8 @@ with col1:
         )
     }, hide_index=True)
 
-# Display the dataframe in the second column
-with col2:
+# Display the dataframe in the second row
+with st.container():
     st.dataframe(df_prediction_proba[['sun', 'snow']], column_config={
         'sun': st.column_config.ProgressColumn(
             'sun',
@@ -148,8 +145,8 @@ with col2:
         )
     }, hide_index=True)
 
-# Display the dataframe in the third column
-with col3:
+# Display the dataframe in the third row
+with st.container():
     st.dataframe(df_prediction_proba[['fog']], column_config={
         'fog': st.column_config.ProgressColumn(
             'fog',
