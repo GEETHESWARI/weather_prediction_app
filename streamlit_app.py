@@ -63,7 +63,7 @@ with st.expander('Input features'):
 
 
 
-df_weather = pd.get_dummies(input_penguins)
+df_weather = pd.get_dummies(input_weather)
 
 X = df_weather[1:]
 input_row = df_weather[:1]
