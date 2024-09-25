@@ -14,11 +14,11 @@ with st.expander('Data'):
   weather
 
   st.write('**X**')
-  X_raw = weather.drop('species', axis=1)
+  X_raw = weather.drop('weather', axis=1)
   X_raw
 
   st.write('**y**')
-  y_raw = weather.species
+  y_raw = weather.weather
   y_raw
 
 with st.expander('Data Visualization'):
