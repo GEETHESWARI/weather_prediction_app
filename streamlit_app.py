@@ -13,6 +13,14 @@ with st.expander('Data'):
   weather=pd.read_csv("https://raw.githubusercontent.com/GEETHESWARI/Weather_pred/refs/heads/main/seattle-weather.csv")
   weather
 
+  st.write('**X**')
+  X_raw = weather.drop('species', axis=1)
+  X_raw
+
+  st.write('**y**')
+  y_raw = weather.species
+  y_raw
+
 with st.expander('Data Visualization'):
   
 
