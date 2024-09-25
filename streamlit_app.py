@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
+from sklearn.ensemble import RandomForestClassifier
 
 
 st.title(' 🌦 Weather Prediction ⛈')
