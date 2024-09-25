@@ -61,6 +61,19 @@ with st.expander('Input features'):
   st.write('**Combined penguins data**')
   input_weather
 
+
+
+df_weather = pd.get_dummies(input_penguins)
+
+X = df_weather[1:]
+input_row = df_weather[:1]
+
+# Encode y
+target_mapper = {'drizzle': 0, 
+                 'rain': 1,
+                 'sun': 2,
+                 'snow': 3, 
+                 'fog':4 }
   
   
   
