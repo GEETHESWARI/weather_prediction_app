@@ -42,9 +42,8 @@ with st.sidebar:
   data={'precipitation': precipitation, 
         'temp_max': temp_max,
         'temp_min': temp_min,
-        'wind':wind
-    }
- input_df= pd.DataFrame (data,index=[0])
+        'wind':wind}
+ input_df= pd.DataFrame(data,index=[0])
  input_df
 
   
