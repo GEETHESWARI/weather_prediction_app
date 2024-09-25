@@ -130,6 +130,11 @@ st.dataframe(df_prediction_proba,
                  min_value=0,
                  max_value=1
                ),
+               
+             }, hide_index=True)
+
+st.dataframe(df_prediction_proba,
+             column_config={
                'snow': st.column_config.ProgressColumn(
                  'snow',
                  format='%f',
@@ -144,7 +149,7 @@ st.dataframe(df_prediction_proba,
                  min_value=0,
                  max_value=1
                ),
-             }, hide_index=True)
+             },hide_index=True)
 
 weather_pred = np.array(['drizzle', 'rain', 'sun', 'snow', 'fog'])
 st.success(str(weather_pred[prediction][0]))
